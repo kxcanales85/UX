@@ -26,6 +26,13 @@
 
     </FrameLayout>
 
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="CLICK ME"/>
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
