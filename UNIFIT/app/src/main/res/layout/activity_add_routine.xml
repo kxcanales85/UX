@@ -9,137 +9,134 @@
     android:background="@color/colorWhite"
     tools:context="com.example.bustamante.unifit.AddRoutineActivity">
 
-    <Button
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorWhite"
-        android:textSize="17sp"
-        android:clickable="false"
-        android:id="@+id/routineName"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/routineImage"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:paddingRight="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_vertical_margin"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorWhite"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/seriesText"
-                android:text="Series"/>
+                android:textSize="17sp"
+                android:clickable="false"
+                android:id="@+id/routineName"/>
 
-            <Spinner
-
-                android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Theme.AppCompat"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/seriesSpinner">
+                android:id="@+id/routineImage"/>
 
-            </Spinner>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/seriesText"
+                        android:text="Series"/>
+
+                    <Spinner
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Theme.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/seriesSpinner">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/colorWhite"
+                        android:text="Repeticiones"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Theme.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/repeticionesSpinner">
+
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Peso (kg)"/>
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Theme.AppCompat"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/pesoSpinner">
+
+                    </Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/activity_vertical_margin">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addRoutine"
+                    android:textSize="16sp"
+                    android:text="Añadir rutina"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <android.support.design.widget.BottomNavigationView
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="?android:attr/windowBackground"
+                    app:menu="@menu/navigation" />
+            </FrameLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/activity_vertical_margin"
-            android:paddingRight="@dimen/activity_vertical_margin">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/colorWhite"
-                android:text="Repeticiones"/>
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:theme="@style/Theme.AppCompat"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/repeticionesSpinner">
-
-            </Spinner>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:layout_gravity="center_horizontal"
-                android:text="Peso (kg)"/>
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:theme="@style/Theme.AppCompat"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/pesoSpinner">
-
-            </Spinner>
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-
-    <FrameLayout
-        android:id="@+id/content2"
-        android:layout_weight="2"
-        android:layout_height="0dp"
-        android:layout_width="match_parent">
-
-    </FrameLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:paddingLeft="@dimen/activity_vertical_margin"
-        android:paddingRight="@dimen/activity_vertical_margin"
-        android:layout_gravity="end"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
-        android:layout_height="wrap_content"
-        android:id="@+id/addRoutine"
-        android:textSize="16sp"
-        android:text="Añadir rutina"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorGreen"/>
-
-    <FrameLayout
-        android:id="@+id/content"
-        android:layout_weight="1"
-        android:layout_height="0dp"
-        android:layout_width="match_parent">
-
-    </FrameLayout>
-
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
-
+    </ScrollView>
 </LinearLayout>
