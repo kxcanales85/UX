@@ -6,4 +6,9 @@
     <string name="title_inicio">Inicio</string>
     <string name="title_rutinas">Rutinas</string>
     <string name="title_alimentacion">Alimentación</string>
+    <string name="historial1_home">Historial Ejercicios</string>
+    <string name="historial2_home">Historial calorías</string>
+    <string name="carbo">Carbohidratos</string>
+    <string name="proteinas">Proteinas</string>
+    <string name="grasas">  Grasas</string>
 </resources>
