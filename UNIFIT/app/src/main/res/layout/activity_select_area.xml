@@ -2,13 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorWhite"
-    tools:context="com.example.bustamante.unifit.AddRoutinesActivity">
-
+    tools:context="com.example.bustamante.unifit.SelectAreaActivity">
 
     <TabHost
         android:id="@+id/tabhost"
@@ -43,17 +40,17 @@
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimaryDark"
                         android:textColor="@color/colorWhite"
-                        android:textSize="17sp"
+                        android:textSize="16sp"
                         android:clickable="false"
-                        android:id="@+id/selectedMuscle"/>
+                        android:text="Seleccione el área a entrenar"/>
 
-                    <ListView
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:dividerHeight="1dp"
-                        android:divider="@color/colorWhite"
-                        android:background="#e8f8f5"
-                        android:id="@+id/listViewMusculo" />
+                        android:clickable="true"
+                        android:paddingTop="10dp"
+                        android:id="@+id/bodyImage"/>
+
 
                 </LinearLayout>
 
@@ -63,6 +60,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+
                 </LinearLayout>
 
             </FrameLayout>
@@ -70,20 +68,17 @@
     </TabHost>
 
     <FrameLayout
-        android:id="@+id/content"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_width="match_parent">
+        android:layout_weight="1">
+
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/navigation5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
 
 </LinearLayout>
-
-

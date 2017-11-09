@@ -20,7 +20,10 @@
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".AddRoutinesActivity" />
-        <activity android:name=".AddRoutineActivity"></activity>
+        <activity android:name=".AddRoutineActivity" />
+        <activity android:name=".MyRoutinesActivity" />
+        <activity android:name=".EditRoutineActivity" />
+        <activity android:name=".SelectAreaActivity"></activity>
     </application>
 
 </manifest>

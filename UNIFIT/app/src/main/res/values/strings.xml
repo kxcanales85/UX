@@ -11,4 +11,5 @@
     <string name="carbo">Carbohidratos</string>
     <string name="proteinas">Proteinas</string>
     <string name="grasas">  Grasas</string>
+    <string name="descripcion_rutina">4 series, 12 repeticiones, 35kg, 60seg(descanso)</string>
 </resources>

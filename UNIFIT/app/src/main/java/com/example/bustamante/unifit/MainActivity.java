@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,AddRoutinesActivity.class);
+                Intent i = new Intent(MainActivity.this,MyRoutinesActivity.class);
                 startActivity(i);
                 /*AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                 builder.setMessage("Hola mundo")

@@ -60,7 +60,7 @@ public class AddRoutinesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_routines);
-        setTitle("Rutinas");
+        setTitle("Agregar ejercicio");
 
         setSelectedMuscle();
 
@@ -80,14 +80,14 @@ public class AddRoutinesActivity extends AppCompatActivity {
         tab = (TabHost)findViewById(R.id.tabhost);
         tab.setup();
 
-        spec = tab.newTabSpec("Por Nombre");
+        spec = tab.newTabSpec("Por músculo");
         spec.setContent(R.id.tab1);
-        spec.setIndicator("Por nombre");
+        spec.setIndicator("Por músculo");
         tab.addTab(spec);
 
-        spec = tab.newTabSpec("Por músculo");
+        spec = tab.newTabSpec("Por nombre");
         spec.setContent(R.id.tab2);
-        spec.setIndicator("Por músculo");
+        spec.setIndicator("Por nombre");
         tab.addTab(spec);
 
         return true;
