@@ -5,7 +5,12 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.NavUtils;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
@@ -34,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
     private boolean hasLabelsOutside = false;
     private boolean hasLabelForSelected = false;
     private double carbo = 25.9, proteinas = 20.1, grasas = 30.8, total = 0.0;
+    private BottomNavigationView bottomNavigationView;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
     private class ValueTouchListener implements PieChartOnValueSelectListener {
 
@@ -54,13 +67,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_rutinas:
-                    mTextMessage.setText(R.string.title_rutinas);
+                    //mTextMessage.setText(R.string.title_rutinas);
                     return true;
                 case R.id.navigation_inicio:
-                    mTextMessage.setText(R.string.title_inicio);
+                    //mTextMessage.setText(R.string.title_inicio);
                     return true;
                 case R.id.navigation_alimentacion:
-                    mTextMessage.setText(R.string.title_alimentacion);
+                    //mTextMessage.setText(R.string.title_alimentacion);
                     return true;
             }
             return false;
@@ -92,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     private void generateData() {
         int numValues = 3;	// Numero de particiones y/o variables
         List<SliceValue> values = new ArrayList<SliceValue>();
-	/*Definimos el tamano (mediante un valor porcentual referente a cierta variable) y el color que tendra*/
+	    /*Definimos el tamano (mediante un valor porcentual referente a cierta variable) y el color que tendra*/
         if (carbo > 0) {
             SliceValue sliceValueBuenas = new SliceValue((float) ((float) carbo * 100 / total), getResources().getColor(R.color.colorCarbo));
             values.add(sliceValueBuenas);
@@ -111,28 +124,48 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.miProfile:
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+                //showProfileView();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_main);
         setContentView(R.layout.activity_main);
-
+        setTitle("Inicio");
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        Button boton;
-        boton = (Button)findViewById(R.id.btn1);
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        //Para marcar el menú donde estamos
+        bottomNavigationView.setSelectedItemId(R.id.navigation_inicio);
 
+        //Para cambiar el logo del actionbar
+        //getActionBar().setIcon(R.drawable.icon);
+        ActionBar actionBar = getSupportActionBar(); // or getActionBar();
+        getSupportActionBar().setLogo(R.mipmap.logo_pequeno);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        /*   GRÁFICO   */
         pieChart = (PieChartView) findViewById(R.id.chart);
-
         carbo = 25.9;
         proteinas = 20.1;
         grasas = 30.8;
         total=carbo+proteinas+grasas;
-
         pieChart.setOnValueTouchListener(new ValueTouchListener());
         toggleLabels();
         generateData();
+        /*  FIN GRÁFICO  */
 
-        boton.setOnClickListener(new View.OnClickListener() {
+        /*boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,AddRoutinesActivity.class);
@@ -143,9 +176,9 @@ public class MainActivity extends AppCompatActivity {
 
                 AlertDialog alerta = builder.create();
 
-                alerta.show();*/
+                alerta.show();
             }
         });
+        */
     }
-
 }

@@ -11,4 +11,20 @@
     <string name="carbo">Carbohidratos</string>
     <string name="proteinas">Proteinas</string>
     <string name="grasas">  Grasas</string>
+    <string name="title_activity_lateral_menu">LateralMenu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_lateral">MenuLateralActivity</string>
+    <string name="user">Usuario</string>
+    <string name="seccion_1">Perfil</string>
+    <string name="seccion_2">Amigos</string>
+    <string name="otras_opciones">Configuraciones</string>
+    <string name="opcion_1">Configuraciones</string>
+    <string name="opcion_2">Ayuda</string>
+    <string name="opcion_3">Cerrar sesión</string>
+    <string name="profile">Perfil</string>
+    <string name="title_activity_profile">ProfileActivity</string>
 </resources>

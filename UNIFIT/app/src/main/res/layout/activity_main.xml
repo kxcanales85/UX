@@ -8,6 +8,10 @@
     android:orientation="vertical"
     tools:context="com.example.bustamante.unifit.MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
+
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
@@ -18,11 +22,15 @@
             android:id="@+id/chart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+
             >
         </lecho.lib.hellocharts.view.PieChartView>
 
     </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -88,25 +96,24 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="CLICK ME"/>
-
-    <Button
         android:id="@+id/historial1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:text="@string/historial1_home"/>
+        android:text="@string/historial1_home"
+        android:drawableLeft="@drawable/ic_fitness_center_black_24dp"/>
 
     <Button
         android:id="@+id/historial2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:text="@string/historial2_home"/>
+        android:text="@string/historial2_home"
+        android:drawableLeft="@drawable/ic_free_breakfast_black_24dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -115,5 +122,4 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/navigation" />
-
 </LinearLayout>
