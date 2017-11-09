@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_redondeado"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_redondeado"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -18,12 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity" />
         <activity android:name=".AddRoutinesActivity" />
         <activity android:name=".AddRoutineActivity" />
+<<<<<<< HEAD
         <activity android:name=".MyRoutinesActivity" />
         <activity android:name=".EditRoutineActivity" />
         <activity android:name=".SelectAreaActivity"></activity>
+=======
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"></activity>
+>>>>>>> 352c87aae457eede491b42f09517904260a70686
     </application>
 
 </manifest>

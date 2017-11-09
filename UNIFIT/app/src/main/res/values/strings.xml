@@ -6,10 +6,29 @@
     <string name="title_inicio">Inicio</string>
     <string name="title_rutinas">Rutinas</string>
     <string name="title_alimentacion">Alimentación</string>
-    <string name="historial1_home">Historial Ejercicios</string>
-    <string name="historial2_home">Historial calorías</string>
+    <string name="historial1_home">Historial de Ejercicios</string>
+    <string name="historial2_home">Historial de Calorías</string>
     <string name="carbo">Carbohidratos</string>
     <string name="proteinas">Proteinas</string>
     <string name="grasas">  Grasas</string>
+<<<<<<< HEAD
     <string name="descripcion_rutina">4 series, 12 repeticiones, 35kg, 60seg(descanso)</string>
+=======
+    <string name="title_activity_lateral_menu">LateralMenu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_lateral">MenuLateralActivity</string>
+    <string name="user">Usuario</string>
+    <string name="seccion_1">Perfil</string>
+    <string name="seccion_2">Amigos</string>
+    <string name="otras_opciones">Configuraciones</string>
+    <string name="opcion_1">Configuraciones</string>
+    <string name="opcion_2">Ayuda</string>
+    <string name="opcion_3">Cerrar sesión</string>
+    <string name="profile">Perfil</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+>>>>>>> 352c87aae457eede491b42f09517904260a70686
 </resources>
