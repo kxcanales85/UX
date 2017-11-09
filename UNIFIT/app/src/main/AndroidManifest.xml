@@ -20,15 +20,13 @@
         </activity>
         <activity android:name=".AddRoutinesActivity" />
         <activity android:name=".AddRoutineActivity" />
-<<<<<<< HEAD
         <activity android:name=".MyRoutinesActivity" />
         <activity android:name=".EditRoutineActivity" />
         <activity android:name=".SelectAreaActivity"></activity>
-=======
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"></activity>
->>>>>>> 352c87aae457eede491b42f09517904260a70686
+
     </application>
 
 </manifest>

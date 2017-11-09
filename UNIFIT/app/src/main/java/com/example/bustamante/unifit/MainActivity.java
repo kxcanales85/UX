@@ -67,12 +67,16 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_rutinas:
+                    Intent intent2 = new Intent(MainActivity.this, MyRoutinesActivity.class);
+                    startActivity(intent2);
                     //mTextMessage.setText(R.string.title_rutinas);
                     return true;
                 case R.id.navigation_inicio:
                     //mTextMessage.setText(R.string.title_inicio);
                     return true;
                 case R.id.navigation_alimentacion:
+                    Intent intent1 = new Intent(MainActivity.this, MyRoutinesActivity.class);
+                    startActivity(intent1);
                     //mTextMessage.setText(R.string.title_alimentacion);
                     return true;
             }
@@ -132,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 //showProfileView();
                 return true;
+            case R.id.rutinas:
+                Intent intent1 = new Intent(this, MyRoutinesActivity.class);
+                startActivity(intent1);
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -146,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
         //Para marcar el menú donde estamos
-        bottomNavigationView.setSelectedItemId(R.id.navigation_inicio);
+        //bottomNavigationView.setSelectedItemId(R.id.navigation_inicio);
 
         //Para cambiar el logo del actionbar
         //getActionBar().setIcon(R.drawable.icon);

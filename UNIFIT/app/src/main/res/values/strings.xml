@@ -11,9 +11,7 @@
     <string name="carbo">Carbohidratos</string>
     <string name="proteinas">Proteinas</string>
     <string name="grasas">  Grasas</string>
-<<<<<<< HEAD
     <string name="descripcion_rutina">4 series, 12 repeticiones, 35kg, 60seg(descanso)</string>
-=======
     <string name="title_activity_lateral_menu">LateralMenu</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -30,5 +28,4 @@
     <string name="opcion_3">Cerrar sesión</string>
     <string name="profile">Perfil</string>
     <string name="title_activity_profile">ProfileActivity</string>
->>>>>>> 352c87aae457eede491b42f09517904260a70686
 </resources>

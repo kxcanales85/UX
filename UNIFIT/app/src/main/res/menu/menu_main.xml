@@ -8,4 +8,10 @@
         app:showAsAction="ifRoom|withText"
         android:title="@string/profile">
     </item>
+    <item
+        android:id="@+id/rutinas"
+        android:icon="@drawable/ic_fitness_center_black_24dp"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/profile">
+    </item>
 </menu>
