@@ -150,9 +150,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Para cambiar el logo del actionbar
         //getActionBar().setIcon(R.drawable.icon);
-        ActionBar actionBar = getSupportActionBar(); // or getActionBar();
-        getSupportActionBar().setLogo(R.mipmap.logo_pequeno);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //ActionBar actionBar = getSupportActionBar(); // or getActionBar();
+        //getSupportActionBar().setIcon(R.mipmap.logo_pequeno);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         /*   GRÁFICO   */
         pieChart = (PieChartView) findViewById(R.id.chart);
